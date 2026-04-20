@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FAF7F2" />
+
+  <!--
+    ===========================================================
+    SEO E TITOLO PAGINA — modificabile da Emma
+    ===========================================================
+    Quello che si vede nella scheda del browser e nei risultati Google.
+    Mantieni breve (max 60 caratteri per il title, 160 per la description).
+  -->
+  <title>Emma Veronesi — Psicologa del Benessere | Percorsi Online</title>
+  <meta name="description" content="Emma Veronesi, Psicologa iscritta all'Ordine degli Psicologi della Lombardia. Percorsi online per ansia, emozioni, performance e mindfulness." />
+
+  <!-- Open Graph (anteprima quando il link viene condiviso su WhatsApp/Facebook/LinkedIn) -->
+  <meta property="og:title" content="Emma Veronesi — Psicologa del Benessere" />
+  <meta property="og:description" content="Allena la mente, non solo il corpo. Percorsi psicologici online per chi cerca ascolto e strategie pratiche." />
+  <meta property="og:image" content="assets/img/camelia.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="it_IT" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+  <!-- Font: Cormorant Garamond (titoli) + Inter (testo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!--
+    ===========================================================
+    HEADER — barra di navigazione fissa in alto
+    ===========================================================
+    Le voci del menu sono Emma, Servizi, Contatta.
+    Per cambiare un'etichetta del menu, modifica il testo dentro <a>.
+  -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navigazione principale">
+      <a href="#hero" class="nav-brand" aria-label="Emma Veronesi - Home">
+        <img src="assets/img/favicon.svg" alt="" aria-hidden="true" />
+        <span>Emma Veronesi</span>
+      </a>
+      <button class="nav-toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="#emma">Emma</a></li>
+        <li><a href="#servizi">Servizi</a></li>
+        <li><a href="#contatta">Contatta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!--
+      =========================================================
+      SEZIONE HERO — primo schermo che si vede aprendo il sito
+      =========================================================
+      TESTO MODIFICABILE: occhiello, titolone, sottotitolo, bottoni.
+      Lo slogan è "Allena la mente, non solo il corpo" (dal brand Instagram).
+    -->
+    <section class="hero" id="hero">
+      <div class="hero-decoration top-right" aria-hidden="true">
+        <img src="assets/img/camelia-small.jpg" alt="" />
+      </div>
+      <div class="hero-decoration bottom-left" aria-hidden="true">
+        <img src="assets/img/camelia-small.jpg" alt="" />
+      </div>
+
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text reveal">
+            <p class="eyebrow">Psicologa del Benessere</p>
+            <h1>
+              Allena la mente,<br />
+              non solo <span class="accent">il corpo.</span>
+            </h1>
+            <p>
+              Percorsi psicologici online per chi vuole capire le proprie emozioni,
+              gestire l'ansia e ritrovare equilibrio. Strategie pratiche, ascolto
+              autentico, evidenza scientifica.
+            </p>
+            <div class="hero-actions">
+              <a href="#contatta" class="btn btn-primary">Scrivimi</a>
+              <a href="#servizi" class="btn btn-secondary">Scopri i servizi</a>
+            </div>
+          </div>
+          <div class="hero-image reveal">
+            <img src="assets/img/camelia.jpg" alt="Camelia rosa tra foglie verdi, simbolo del brand allenamente.emma" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      =========================================================
+      SEZIONE EMMA — chi è Emma, formazione, approccio
+      =========================================================
+      TESTO MODIFICABILE: titolo, ruolo, biografia, valori.
+      DATO DA AGGIORNARE: numero iscrizione Albo (cerca "[TBD]" qui sotto).
+    -->
+    <section class="bg-velo" id="emma">
+      <div class="container">
+        <div class="emma-grid">
+          <div class="emma-portrait reveal">
+            <img src="assets/img/emma-portrait.jpg" alt="Ritratto di Emma Veronesi, Psicologa del Benessere" />
+          </div>
+          <div class="emma-bio reveal">
+            <p class="eyebrow">Conosci Emma</p>
+            <h2>Dott.ssa Emma Veronesi<br /><em style="font-style:italic;color:var(--rosa-camelia);font-weight:400;font-size:0.7em">Psicologa del Benessere</em></h2>
+            <span class="emma-credenziali">
+              Iscritta all'Ordine degli Psicologi della Lombardia n. [TBD]
+            </span>
+
+            <p>
+              Sono laureata in <strong>Psicologia per il Benessere, Empowerment, Riabilitazione e Tecnologie Positive</strong>
+              presso l'Università Cattolica del Sacro Cuore di Milano. La mia formazione integra
+              ricerca scientifica e strumenti pratici per affrontare ansia, gestione delle emozioni
+              e performance.
+            </p>
+            <p>
+              Ho maturato esperienza nel <strong>counseling familiare</strong> presso il CMTF di Monza
+              e nella <strong>psicologia del lavoro</strong>, accompagnando persone in fasi di cambiamento,
+              blocchi e momenti di transizione. Credo in un approccio caldo, evidence-based e profondamente
+              rispettoso della storia di chi ho davanti.
+            </p>
+            <p>
+              Online, attraverso videosedute, ricevo persone da tutta Italia. Il mio obiettivo è offrire
+              uno spazio sicuro in cui ascoltare, dare senso e costruire insieme strategie concrete per stare meglio.
+            </p>
+          </div>
+        </div>
+
+        <!--
+          Sotto-sezione: i 4 valori di Emma (cosa puoi aspettarti)
+          Per modificare un valore: cambia titolo (h4) e descrizione (p).
+        -->
+        <div class="emma-valori reveal">
+          <article class="valore-card">
+            <h4>Ascolto autentico</h4>
+            <p>Uno spazio senza giudizio, dove le tue emozioni hanno il tempo di emergere e prendere forma.</p>
+          </article>
+          <article class="valore-card">
+            <h4>Strumenti scientifici</h4>
+            <p>Approcci basati su evidenze: psicologia positiva, mindfulness, tecniche cognitive e comportamentali.</p>
+          </article>
+          <article class="valore-card">
+            <h4>Strategie pratiche</h4>
+            <p>Non solo parole: imparerai esercizi e abitudini concrete da portare nella tua quotidianità.</p>
+          </article>
+          <article class="valore-card">
+            <h4>Riservatezza</h4>
+            <p>Tutto ciò che condividi è protetto dal segreto professionale e dal Codice Deontologico degli Psicologi.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      =========================================================
+      SEZIONE SERVIZI — cosa offre Emma
+      =========================================================
+      TESTO MODIFICABILE: titoli e descrizioni delle 4 card servizi.
+      Per AGGIUNGERE un servizio: copia un blocco <article class="servizio-card">...</article>
+      e modifica icona, titolo e descrizione.
+      Per RIMUOVERE: cancella un intero blocco <article>.
+    -->
+    <section id="servizi">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow">Come posso aiutarti</p>
+          <h2>I percorsi che propongo</h2>
+          <p>
+            Tutti i percorsi si svolgono <strong>online, in videoseduta</strong>.
+            Ogni percorso è personalizzato sulla base di un primo colloquio conoscitivo gratuito.
+          </p>
+        </header>
+
+        <div class="servizi-grid">
+          <article class="servizio-card reveal">
+            <div class="servizio-icon" aria-hidden="true">
+              <!-- Icona: foglia (ansia ed emozioni) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6"/>
+              </svg>
+            </div>
+            <h3>Ansia ed emozioni</h3>
+            <p>
+              Imparare a riconoscere ansia, gelosia, rabbia e altre emozioni intense,
+              dando loro un senso e trasformandole in informazioni utili.
+            </p>
+          </article>
+
+          <article class="servizio-card reveal">
+            <div class="servizio-icon" aria-hidden="true">
+              <!-- Icona: scintilla (performance) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v3M12 18v3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M3 12h3M18 12h3M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/>
+                <circle cx="12" cy="12" r="3.2"/>
+              </svg>
+            </div>
+            <h3>Performance e blocchi</h3>
+            <p>
+              Sport, studio, lavoro: superare la paura di non riuscire, gestire la
+              pressione e ritrovare motivazione e fiducia nelle proprie capacità.
+            </p>
+          </article>
+
+          <article class="servizio-card reveal">
+            <div class="servizio-icon" aria-hidden="true">
+              <!-- Icona: cerchio meditativo (mindfulness) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="12" cy="12" r="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3>Mindfulness e benessere</h3>
+            <p>
+              Costruire una pratica di consapevolezza quotidiana per vivere il presente
+              con maggiore presenza, calma e chiarezza.
+            </p>
+          </article>
+
+          <article class="servizio-card reveal">
+            <div class="servizio-icon" aria-hidden="true">
+              <!-- Icona: cuore (adolescenti) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"/>
+              </svg>
+            </div>
+            <h3>Adolescenti e giovani adulti</h3>
+            <p>
+              Accompagnamento nelle fasi di transizione: identità, scuola, relazioni, futuro.
+              Uno spazio di parola dedicato anche a chi spesso non ne ha.
+            </p>
+          </article>
+        </div>
+
+        <!--
+          Sotto-sezione: come funziona (3 passi del percorso)
+          Per modificare un passo: cambia titolo (h4) e descrizione (p).
+        -->
+        <div class="modalita reveal">
+          <h3>Come funziona</h3>
+          <div class="modalita-passi">
+            <div class="passo">
+              <div class="passo-numero">1</div>
+              <h4>Primo contatto</h4>
+              <p>Mi scrivi tramite il form qui sotto o WhatsApp. Ti rispondo entro 48 ore lavorative.</p>
+            </div>
+            <div class="passo">
+              <div class="passo-numero">2</div>
+              <h4>Colloquio conoscitivo</h4>
+              <p>Una videoseduta gratuita di circa 30 minuti per capire insieme il tuo bisogno e se posso esserti utile.</p>
+            </div>
+            <div class="passo">
+              <div class="passo-numero">3</div>
+              <h4>Percorso personalizzato</h4>
+              <p>Definiamo insieme obiettivi, frequenza e durata. Le sedute si svolgono online, in un giorno e orario concordato.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      =========================================================
+      SEZIONE CONTATTA — form + WhatsApp
+      =========================================================
+      TESTO MODIFICABILE: titolo, intro, etichette form.
+      DATO TECNICO: la chiave Web3Forms va impostata in assets/js/config.js (lo fa Michele).
+      DATO TECNICO: il numero WhatsApp va impostato in assets/js/config.js (lo fa Michele).
+    -->
+    <section class="bg-crema-scuro" id="contatta">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow">Contattami</p>
+          <h2>Iniziamo a conoscerci</h2>
+          <p>
+            Scrivimi per fissare un primo colloquio conoscitivo gratuito o per qualsiasi domanda.
+            Ti rispondo personalmente entro 48 ore lavorative.
+          </p>
+        </header>
+
+        <div class="contatta-grid">
+          <form class="contatta-form reveal" id="contatta-form" novalidate>
+            <div class="form-row">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+            <div class="form-row">
+              <label for="message">Raccontami in poche righe cosa ti porta qui</label>
+              <textarea id="message" name="message" required rows="5"></textarea>
+            </div>
+
+            <!-- Honeypot anti-spam (invisibile, i bot lo riempiono e capiamo che sono spam) -->
+            <div class="form-row honeypot" aria-hidden="true">
+              <label for="botcheck">Lascia vuoto</label>
+              <input type="text" id="botcheck" name="botcheck" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <label class="form-consent">
+              <input type="checkbox" name="consenso" required />
+              <span>
+                Ho letto la <a href="privacy.html">Privacy Policy</a> e acconsento al
+                trattamento dei miei dati al solo fine di essere ricontattato/a.
+              </span>
+            </label>
+
+            <button type="submit" class="btn btn-primary" style="width:100%">
+              Invia messaggio
+            </button>
+
+            <div class="form-feedback" id="form-feedback" role="status" aria-live="polite"></div>
+          </form>
+
+          <aside class="contatta-side">
+            <div class="whatsapp-card reveal">
+              <h4>Preferisci WhatsApp?</h4>
+              <p>
+                Se ti è più comodo, puoi scrivermi direttamente. Risponderò non
+                appena possibile, sempre nel rispetto della tua riservatezza.
+              </p>
+              <a href="#" data-whatsapp class="btn btn-whatsapp" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.498 14.382c-.301-.15-1.767-.872-2.04-.971-.273-.101-.473-.15-.673.151-.197.295-.771.97-.944 1.17-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.18 2.095 3.195 5.076 4.485.713.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016a9.87 9.87 0 0 1-5.031-1.378l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.89-9.885 9.89M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/>
+                </svg>
+                <span>Scrivimi su WhatsApp</span>
+              </a>
+            </div>
+
+            <div class="avviso-riservatezza">
+              <p>
+                <strong>Riservatezza.</strong> I tuoi messaggi sono trattati con la massima riservatezza,
+                ai sensi del Codice Deontologico degli Psicologi.
+              </p>
+              <p style="margin-top:0.5rem">
+                <strong>In caso di emergenza psicologica</strong> chiama il 112 o il
+                Telefono Amico Italia 02 2327 2327.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--
+    ===========================================================
+    FOOTER — dati professionali obbligatori per legge
+    ===========================================================
+    DATI DA AGGIORNARE (cerca "[TBD]" qui sotto):
+    - Numero iscrizione Albo
+    - P.IVA
+    - Email
+  -->
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <div class="footer-brand">Emma Veronesi</div>
+        <p class="footer-tagline">Allena la mente, non solo il corpo.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Studio</h5>
+        <p>Dott.ssa Emma Veronesi</p>
+        <p>Psicologa</p>
+        <p>Iscritta all'Ordine degli Psicologi della Lombardia n. [TBD]</p>
+        <p>P.IVA [TBD]</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contatti & Info</h5>
+        <p><a href="mailto:[TBD-EMAIL]">[TBD-EMAIL]</a></p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+        <p><a href="cookie.html">Cookie Policy</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      © <span data-year>2026</span> Emma Veronesi · Tutti i diritti riservati
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
