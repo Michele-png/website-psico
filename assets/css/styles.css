@@ -885,6 +885,14 @@ section.bg-crema-scuro {
   color: var(--rosa-cipria);
 }
 
+.footer-col .footer-social-links .social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
 .footer-bottom {
   max-width: var(--content-max);
   margin: var(--space-l) auto 0;
