@@ -55,7 +55,7 @@ Se non vuoi fare a mano, puoi usare ChatGPT/Claude/Gemini:
 ✅ Aggiungere o togliere un valore tra i 4 box "Cosa puoi aspettarti"
 ✅ Aggiungere o togliere una card tra i servizi (copia/cancella un blocco `<article class="servizio-card">...</article>`)
 ✅ Cambiare il numero dei passi in "Come funziona"
-✅ Modificare il footer (numero Albo, P.IVA, email)
+✅ Modificare il footer (P.IVA, link social, pagine legali)
 
 #### Cose da NON modificare in autonomia
 
@@ -83,20 +83,13 @@ Se hai dubbi, scrivi a Michele.
 
 #### 1. Attivare GitHub Pages
 
-Il repo è **privato**. GitHub Pages su repo privati richiede piano GitHub Pro (4$/mese) oppure team. Le opzioni:
-
-- **Opzione A** (gratis): rendere il repo pubblico → Settings → General → Danger Zone → Change visibility → Public. Pages funziona subito.
-- **Opzione B** (gratis): mantenere privato e usare **Cloudflare Pages** invece di GitHub Pages: vai su [pages.cloudflare.com](https://pages.cloudflare.com), connetti il repo (anche privato), build settings vuote (output directory `/`).
-- **Opzione C** (a pagamento): GitHub Pro 4$/mese, e Pages funziona anche su privato.
-
-Scelta consigliata per il MVP: **Opzione A** (rendere pubblico). Niente di sensibile è committato.
-
-Una volta attivato Pages: **Settings → Pages → Source: Deploy from a branch → Branch: main / (root) → Save.** Sito live su `https://michele-png.github.io/website-psico/` in ~1 minuto.
+Il repo è pubblico e GitHub Pages è già configurato da `main / (root)`.
+Il sito live è `https://michele-png.github.io/website-psico/`.
 
 #### 2. Configurare Web3Forms (form di contatto)
 
 1. Vai su [web3forms.com](https://web3forms.com/), clicca **"Create your Access Key"**.
-2. Inserisci l'email di Emma (è dove arriveranno i messaggi).
+2. Inserisci l'email di Emma (è dove arriveranno i messaggi; per ora la Gmail personale non è mostrata pubblicamente sul sito).
 3. Riceverai una chiave via email (un UUID tipo `a1b2c3d4-...`).
 4. Apri `assets/js/config.js`, sostituisci `INSERISCI-QUI-LA-CHIAVE-WEB3FORMS` con la chiave reale.
 5. Commit + push.
@@ -104,20 +97,13 @@ Una volta attivato Pages: **Settings → Pages → Source: Deploy from a branch 
 
 #### 3. Configurare WhatsApp
 
-In `assets/js/config.js`, sostituisci `393331234567` con il vero numero WhatsApp di Emma (formato internazionale senza `+`).
+In `assets/js/config.js`, il campo `whatsapp.numero` è volutamente vuoto: il bottone resta visibile ma disabilitato.
+Quando avrai il vero numero WhatsApp di Emma, inseriscilo in formato internazionale senza `+` (es. `393331234567`).
 
-#### 4. Riempire i `[TBD]` legali
+#### 4. Completare la P.IVA
 
-Cerca tutte le occorrenze di `[TBD]` nei file `index.html`, `privacy.html`, `cookie.html` e sostituiscile con:
-
-| Placeholder | Significato |
-|---|---|
-| `[TBD]` (n. Albo) | Numero iscrizione all'Ordine degli Psicologi della Lombardia |
-| `[TBD]` (P.IVA) | Partita IVA di Emma |
-| `[TBD-EMAIL]` | Email professionale di Emma |
-| `[TBD-DOMINIO]` | Dominio del sito (es. `emmaveronesi.it`) |
-
-Il modo veloce: usa "Find & Replace" del tuo editor.
+Cerca `P.IVA da inserire` nei file `index.html`, `privacy.html` e `cookie.html`, poi sostituiscilo con la Partita IVA reale di Emma.
+Il numero Albo è già aggiornato: `32092`.
 
 ### Aggiungere un dominio custom (in seguito)
 
@@ -134,7 +120,7 @@ Quando comprerai il dominio (consigliati: [Aruba](https://www.aruba.it) o [Regis
      ```
    - 1 record **CNAME** per `www` che punta a `michele-png.github.io`.
 3. Su GitHub: Settings → Pages → Custom domain → inserisci `emmaveronesi.it` → Save → spunta "Enforce HTTPS" (dopo che la verifica DNS è completata, ~10 min - 24 h).
-4. Aggiorna `[TBD-DOMINIO]` nei file legali.
+4. Aggiorna il dominio GitHub Pages nella Privacy Policy con il dominio custom scelto.
 
 ### Email professionale gratuita (in seguito)
 

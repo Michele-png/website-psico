@@ -10,7 +10,8 @@
    3. Copia la chiave che riceverai via email
    4. Sostituisci 'INSERISCI-QUI-LA-CHIAVE-WEB3FORMS' qui sotto
 
-   Per il numero WhatsApp: formato internazionale senza '+', es. 393331234567
+   Per il numero WhatsApp: formato internazionale senza '+', es. 393331234567.
+   Lascia stringa vuota per mostrare il bottone come "presto disponibile".
    ============================================================ */
 
 window.SITE_CONFIG = {
@@ -20,7 +21,7 @@ window.SITE_CONFIG = {
   },
 
   whatsapp: {
-    numero: '393331234567',
+    numero: '',
     messaggio: 'Ciao Emma, ti scrivo dal tuo sito perché vorrei...',
   },
 };

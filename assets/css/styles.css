@@ -187,6 +187,16 @@ section.bg-crema-scuro {
   transform: translateY(-2px);
 }
 
+.btn-disabled,
+.btn-disabled:hover {
+  background-color: var(--verde-salvia);
+  color: var(--bianco);
+  cursor: not-allowed;
+  opacity: 0.72;
+  transform: none;
+  box-shadow: none;
+}
+
 /* ---------- Header / Navigation ---------- */
 .site-header {
   position: fixed;
@@ -695,6 +705,49 @@ section.bg-crema-scuro {
 .whatsapp-card p {
   font-size: 0.95rem;
   margin-bottom: var(--space-m);
+}
+
+.social-card {
+  background-color: var(--bianco);
+  padding: var(--space-l);
+  border-radius: var(--radius-l);
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.social-card h4 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  margin-bottom: var(--space-s);
+  color: var(--testo);
+}
+
+.social-card p {
+  font-size: 0.95rem;
+  margin-bottom: var(--space-m);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--verde-salvia);
+  color: var(--verde-foglia);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.social-links a:hover {
+  background-color: var(--verde-velo);
 }
 
 .avviso-riservatezza {

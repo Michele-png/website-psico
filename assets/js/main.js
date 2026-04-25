@@ -93,9 +93,20 @@
   const config = window.SITE_CONFIG || {};
   const whatsappBtn = document.querySelector('[data-whatsapp]');
   if (whatsappBtn && config.whatsapp) {
-    const numero = config.whatsapp.numero;
+    const numero = (config.whatsapp.numero || '').trim();
     const messaggio = encodeURIComponent(config.whatsapp.messaggio || '');
-    whatsappBtn.href = `https://wa.me/${numero}?text=${messaggio}`;
+    if (numero) {
+      whatsappBtn.href = `https://wa.me/${numero}?text=${messaggio}`;
+      whatsappBtn.classList.remove('btn-disabled');
+      whatsappBtn.removeAttribute('aria-disabled');
+      whatsappBtn.removeAttribute('tabindex');
+    } else {
+      whatsappBtn.removeAttribute('href');
+      whatsappBtn.classList.add('btn-disabled');
+      whatsappBtn.setAttribute('aria-disabled', 'true');
+      whatsappBtn.setAttribute('tabindex', '-1');
+      whatsappBtn.addEventListener('click', (e) => e.preventDefault());
+    }
   }
 
   /* ---------- Form submit (Web3Forms) ---------- */
@@ -122,7 +133,7 @@
       if (!accessKey || accessKey.includes('INSERISCI')) {
         feedback.classList.add('error');
         feedback.textContent =
-          'Form non ancora configurato. Per favore scrivi a Emma direttamente via WhatsApp.';
+          'Form non ancora configurato. Riprova più tardi o usa i canali social indicati nel sito.';
         return;
       }
 
@@ -145,7 +156,7 @@
         if (json.success) {
           feedback.classList.add('success');
           feedback.textContent =
-            'Grazie per avermi scritto. Ti rispondo personalmente entro 48 ore lavorative.';
+            'Grazie per avermi scritto. Ti rispondo personalmente entro un giorno lavorativo.';
           form.reset();
         } else {
           throw new Error(json.message || 'Errore di invio');
@@ -153,7 +164,7 @@
       } catch (err) {
         feedback.classList.add('error');
         feedback.textContent =
-          'Qualcosa non ha funzionato. Riprova tra qualche minuto, oppure scrivimi via WhatsApp.';
+          'Qualcosa non ha funzionato. Riprova tra qualche minuto o usa i canali social indicati nel sito.';
         console.error('Form error:', err);
       } finally {
         submitBtn.disabled = false;
