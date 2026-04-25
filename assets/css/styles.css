@@ -755,13 +755,13 @@ section.bg-crema-scuro {
 }
 
 .social-icon-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-grid;
+  place-items: center;
   width: 2.9rem;
   height: 2.9rem;
   padding: 0;
   border-radius: 50%;
+  box-sizing: border-box;
 }
 
 .social-links .social-icon-link {
@@ -769,6 +769,7 @@ section.bg-crema-scuro {
 }
 
 .social-icon-link svg {
+  display: block;
   width: 1.35rem;
   height: 1.35rem;
   fill: none;
@@ -886,11 +887,17 @@ section.bg-crema-scuro {
 }
 
 .footer-col .footer-social-links .social-icon-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-grid;
+  place-items: center;
   margin-bottom: 0;
   line-height: 1;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer-col .footer-social-links .social-icon-link svg {
+  display: block;
+  margin: 0;
 }
 
 .footer-bottom {
