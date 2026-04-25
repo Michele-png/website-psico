@@ -750,6 +750,77 @@ section.bg-crema-scuro {
   background-color: var(--verde-velo);
 }
 
+.social-links-icons {
+  gap: var(--space-s);
+}
+
+.social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.social-links .social-icon-link {
+  padding: 0;
+}
+
+.social-icon-link svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.social-tiktok svg,
+.social-linkedin svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+.social-instagram {
+  color: #C13584;
+}
+
+.social-tiktok {
+  color: #111111;
+}
+
+.social-linkedin {
+  color: #0A66C2;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-m);
+}
+
+.footer-social-links .social-icon-link {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid rgba(250, 247, 242, 0.35);
+  color: var(--crema);
+  background-color: rgba(250, 247, 242, 0.08);
+}
+
+.footer-social-links .social-icon-link:hover {
+  border-color: var(--rosa-cipria);
+  color: var(--rosa-cipria);
+  background-color: rgba(250, 247, 242, 0.14);
+}
+
+.footer-social-links .social-icon-link svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
 .avviso-riservatezza {
   background-color: var(--crema-scuro);
   padding: var(--space-m);
