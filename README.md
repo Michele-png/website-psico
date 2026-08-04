@@ -17,6 +17,16 @@ Sito statico professionale ospitato su GitHub Pages.
 
 Dopo ogni deploy SEO significativo: Google Search Console → invia `https://emma-allenamente.com/sitemap.xml`.
 
+### Landing pages per intent
+
+| Intent | File |
+|---|---|
+| Psicologa online adolescenti | `psicologo-online-adolescenti.html` |
+| Ansia scolastica | `ansia-scolastica.html` |
+| Ansia giovani adulti | `ansia-giovani-adulti.html` |
+| Autostima adolescenti | `autostima-adolescenti.html` |
+
+
 ---
 
 ## Parte 1 — Guida per Emma

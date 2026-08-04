@@ -1023,6 +1023,125 @@ section.bg-crema-scuro {
 
 .back-home:hover { color: var(--rosa-camelia); }
 
+/* ---------- Landing pages (SEO intent) ---------- */
+.landing-hero {
+  padding: calc(80px + var(--space-xl)) 0 var(--space-xl);
+  background:
+    radial-gradient(ellipse at 90% 10%, rgba(216, 164, 168, 0.18), transparent 45%),
+    radial-gradient(ellipse at 10% 80%, rgba(143, 163, 140, 0.14), transparent 40%),
+    var(--crema, #FAF7F2);
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.88rem;
+  color: var(--testo-soft);
+  margin-bottom: var(--space-m);
+}
+
+.breadcrumb a {
+  color: var(--verde-foglia);
+}
+
+.breadcrumb a:hover {
+  color: var(--rosa-camelia);
+}
+
+.landing-hero h1 {
+  max-width: 16ch;
+  margin-bottom: var(--space-m);
+}
+
+.landing-lead {
+  max-width: 42rem;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-l);
+}
+
+.landing-body {
+  padding: var(--space-xl) 0 calc(var(--space-xl) * 1.4);
+}
+
+.landing-narrow {
+  max-width: 760px;
+}
+
+.landing-block {
+  margin-bottom: var(--space-xl);
+}
+
+.landing-block h2 {
+  margin-bottom: var(--space-m);
+  color: var(--verde-foglia);
+}
+
+.landing-block p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.landing-list {
+  margin: 0 0 1rem 1.2rem;
+  padding: 0;
+  list-style: disc;
+}
+
+.landing-list li {
+  margin-bottom: 0.45rem;
+  color: var(--testo-soft);
+  line-height: 1.55;
+}
+
+.landing-cta {
+  background-color: var(--verde-velo);
+  border-radius: var(--radius-l);
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  margin: var(--space-xl) 0;
+  text-align: center;
+}
+
+.landing-cta h2 {
+  margin-bottom: var(--space-s);
+}
+
+.landing-cta p {
+  max-width: 36rem;
+  margin: 0 auto var(--space-m);
+}
+
+.landing-faq h2,
+.related-paths h2 {
+  margin-bottom: var(--space-m);
+  color: var(--verde-foglia);
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-s);
+}
+
+.related-card {
+  display: block;
+  padding: 1.1rem 1.2rem;
+  background: var(--bianco);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-soft);
+  color: var(--testo);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+}
+
+.related-card:hover {
+  transform: translateY(-2px);
+  color: var(--rosa-camelia);
+}
+
 /* ---------- Animazioni reveal on scroll ---------- */
 .reveal {
   opacity: 0;
