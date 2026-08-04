@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://emma-allenamente.com/sitemap.xml

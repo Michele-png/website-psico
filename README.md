@@ -5,6 +5,17 @@ Sito statico professionale ospitato su GitHub Pages.
 - Stack: HTML + CSS + JavaScript vanilla. Zero build, zero dipendenze.
 - Hosting: GitHub Pages (gratuito).
 - Form di contatto: Web3Forms (gratuito, server EU).
+- Dominio: `emma-allenamente.com` (CNAME nel repo).
+
+### SEO (focus adolescenti e giovani adulti)
+
+- Title, meta description, Open Graph e Twitter Card mirati a consultazione psicologica online per adolescenti/giovani adulti.
+- Canonical + `robots.txt` + `sitemap.xml`.
+- JSON-LD (`ProfessionalService`, `Person`, `WebSite`, `FAQPage`).
+- Sezione FAQ in home (sincronizzata con lo schema FAQPage).
+- H1 resta lo slogan di brand; le keyword stanno in eyebrow, sottotitolo, H2 servizi e FAQ.
+
+Dopo ogni deploy SEO significativo: Google Search Console → invia `https://emma-allenamente.com/sitemap.xml`.
 
 ---
 
