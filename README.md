@@ -7,15 +7,18 @@ Sito statico professionale ospitato su GitHub Pages.
 - Form di contatto: Web3Forms (gratuito, server EU).
 - Dominio: `emma-allenamente.com` (CNAME nel repo).
 
-### SEO (focus adolescenti e giovani adulti)
+### SEO e GEO (aggiornato settembre 2026)
 
-- Title, meta description, Open Graph e Twitter Card mirati a consultazione psicologica online per adolescenti/giovani adulti.
-- Canonical + `robots.txt` + `sitemap.xml`.
-- JSON-LD (`ProfessionalService`, `Person`, `WebSite`, `FAQPage`).
-- Sezione FAQ in home (sincronizzata con lo schema FAQPage).
-- H1 resta lo slogan di brand; le keyword stanno in eyebrow, sottotitolo, H2 servizi e FAQ.
+- Ogni pagina ha title, description, canonical, Open Graph (immagine `assets/img/og-card.jpg` 1200×630) e JSON-LD.
+- Entità unica: la `Person` Emma Veronesi ha un `@id` (`https://emma-allenamente.com/#emma`) riusato da tutte le pagine, con `sameAs` verso Instagram, TikTok, LinkedIn e l'elenco iscritti OPL; lo studio è `ProfessionalService` + `Psychologist`.
+- Landing page per intent (~1.000 parole, risposta diretta in apertura, FAQ, fonti, riquadro autrice, form di contatto): vedi tabella sotto. Pagina `chi-sono.html` per la query di brand.
+- Blog in `blog/` con schema `Article`; due articoli iniziali **in bozza, da far rivedere a Emma prima della pubblicazione**.
+- `robots.txt` consente esplicitamente i crawler AI (GPTBot, ClaudeBot, PerplexityBot…). `llms.txt` e `llms-full.txt` (standard llmstxt.org) si rigenerano con `python3 scripts/build-llms.py`.
+- `sitemap.xml` con `<lastmod>`: contiene solo le pagine indicizzabili (privacy e cookie sono `noindex` e NON vanno nella sitemap).
+- Velocità: hero senza animazione `reveal` (l'elemento LCP è visibile subito), immagini WebP + JPEG responsive con `width`/`height`, `loading="lazy"` sotto la piega. Le versioni ottimizzate si rigenerano con `python3 scripts/optimize-images.py` (richiede Pillow) dopo aver sostituito le foto originali.
+- Font: ancora da Google Fonts. Passo successivo consigliato: self-host in `assets/fonts/` (WOFF2) e aggiornare `<link>` + `@font-face`.
 
-Dopo ogni deploy SEO significativo: Google Search Console → invia `https://emma-allenamente.com/sitemap.xml`.
+**Dopo ogni modifica sostanziale:** aggiorna `<lastmod>` in `sitemap.xml`, rilancia `scripts/build-llms.py`, e in Search Console usa "Controllo URL → Richiedi indicizzazione" sulla pagina modificata.
 
 ### Landing pages per intent
 
@@ -25,7 +28,23 @@ Dopo ogni deploy SEO significativo: Google Search Console → invia `https://emm
 | Ansia scolastica | `ansia-scolastica.html` |
 | Ansia giovani adulti | `ansia-giovani-adulti.html` |
 | Autostima adolescenti | `autostima-adolescenti.html` |
+| Chi è Emma (query di brand) | `chi-sono.html` |
+| Blog | `blog/index.html` + `blog/*.html` |
 
+### Dati da confermare con Emma (scritti nei testi, da verificare)
+
+- Fascia d'età: "dai 13 anni" e "fino ai 30 circa".
+- Durata sedute: 50 minuti; frequenza "settimanale all'inizio"; durate indicative dei percorsi (6–10 incontri per ansia scolastica/da esame, 2–4 mesi per autostima).
+- Piattaforma videochiamata ("Google Meet o equivalente").
+- Politica sul costo: "comunicato nel primo colloquio" (se vuoi pubblicare il prezzo, aggiungi `priceRange` nel JSON-LD dello studio).
+- Bonus psicologo: la FAQ dice che copre sedute con iscritti all'elenco psicoterapeuti — verificare la posizione di Emma.
+
+### Aggiungere un articolo al blog
+
+1. Copia un file in `blog/`, cambia title, description, canonical, `datePublished`/`dateModified` nel JSON-LD, testo e fonti.
+2. Aggiungi la card in `blog/index.html` e la voce nel `blogPost` del JSON-LD dell'indice.
+3. Aggiungi l'URL a `sitemap.xml` con `<lastmod>`; rilancia `python3 scripts/build-llms.py`.
+4. Search Console → Controllo URL → Richiedi indicizzazione.
 
 ---
 
@@ -155,7 +174,8 @@ Quando avrai il dominio, attiva [Cloudflare Email Routing](https://www.cloudflar
 
 ```
 website-psico/
-├── index.html              # Home: hero + Emma + Servizi + Contatta
+├── index.html              # Home: hero + Emma + Servizi + FAQ + Contatta
+├── *.html                  # landing per intent (vedi tabella sopra)
 ├── privacy.html            # Privacy Policy
 ├── cookie.html             # Cookie Policy
 ├── 404.html                # Pagina di errore brandizzata
@@ -166,10 +186,16 @@ website-psico/
 │   │   ├── config.js       # Chiavi tecniche (Web3Forms, WhatsApp)
 │   │   └── main.js         # Logica del sito
 │   └── img/
-│       ├── emma-portrait.jpg
+│       ├── emma-portrait.jpg      # originali (Emma li sostituisce)
 │       ├── camelia.jpg
 │       ├── camelia-small.jpg
+│       ├── *-300/450/600/900.{webp,jpg}  # generati da scripts/optimize-images.py
+│       ├── og-card.jpg            # anteprima social 1200x630 (generata)
 │       └── favicon.svg
+├── blog/                   # articoli + indice
+├── chi-sono.html           # pagina profilo (entità per Google e assistenti AI)
+├── llms.txt, llms-full.txt # indice per gli assistenti AI (generati)
+└── scripts/                # build-llms.py, optimize-images.py
 ```
 
 ### Note di compliance
@@ -185,8 +211,10 @@ website-psico/
 - [ ] Dominio `.it` (~10€/anno)
 - [ ] Email su dominio (`info@emmaveronesi.it` via Cloudflare Routing, gratis)
 - [ ] iubenda per privacy/cookie (~30€/anno)
-- [ ] Google Search Console + sitemap.xml per SEO
+- [x] Google Search Console + sitemap.xml per SEO
+- [ ] Bing Webmaster Tools (ChatGPT e Copilot usano l'indice Bing): verifica + invio sitemap
+- [ ] Google Business Profile (attività online, categoria Psicologo) + schede GuidaPsicologi / MioDottore
 - [ ] Analytics privacy-friendly (Plausible/Umami)
-- [ ] Sezione blog/articoli (riprendendo i post Instagram)
+- [x] Sezione blog/articoli (2 bozze iniziali; proseguire con 2 al mese dai post Instagram)
 - [ ] Calendly o Cal.com integrato per prenotazione diretta
 - [ ] Self-hosting dei font Google

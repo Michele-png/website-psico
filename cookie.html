@@ -16,13 +16,21 @@
 <body>
   <header class="site-header">
     <nav class="nav container" aria-label="Navigazione principale">
-      <a href="index.html" class="nav-brand">
-        <img src="assets/img/favicon.svg" alt="" aria-hidden="true" />
+      <a href="index.html" class="nav-brand" aria-label="Emma Veronesi - Home">
+        <img src="assets/img/favicon.svg" alt="" aria-hidden="true" width="32" height="32" />
         <span>Emma Veronesi</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="index.html#emma">Emma</a></li>
-        <li><a href="index.html#servizi">Servizi</a></li>
+      <button class="nav-toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="chi-sono.html">Chi sono</a></li>
+        <li><a href="index.html#servizi">Percorsi</a></li>
+        <li><a href="psicologo-online-adolescenti.html">Adolescenti</a></li>
+        <li><a href="ansia-scolastica.html">Ansia scolastica</a></li>
+        <li><a href="ansia-giovani-adulti.html">Giovani adulti</a></li>
+        <li><a href="autostima-adolescenti.html">Autostima</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
         <li><a href="index.html#contatta">Contatta</a></li>
       </ul>
     </nav>
@@ -108,44 +116,64 @@
     </div>
   </main>
 
+  <!--
+    ===========================================================
+    FOOTER — dati professionali obbligatori per legge
+    ===========================================================
+    DATI DA AGGIORNARE: P.IVA (cerca "P.IVA da inserire").
+  -->
+  <!--
+    ===========================================================
+    FOOTER — dati professionali obbligatori per legge
+    ===========================================================
+    DATI DA AGGIORNARE: P.IVA (cerca "P.IVA da inserire").
+  -->
   <footer class="site-footer">
     <div class="container">
       <div>
         <div class="footer-brand">Emma Veronesi</div>
-        <p class="footer-tagline">Allena la mente, non solo il corpo.</p>
+        <p class="footer-tagline">Consultazione psicologica online per adolescenti e giovani adulti, in tutta Italia.</p>
       </div>
+
       <div class="footer-col">
-        <h5>Studio</h5>
+        <p class="h5">Studio</p>
         <p>Dott.ssa Emma Veronesi</p>
-        <p>Psicologa</p>
-        <p>Iscritta all'Ordine degli Psicologi della Lombardia n. 32092</p>
+        <p>Psicologa — Iscritta all'Ordine degli Psicologi della Lombardia n. 32092</p>
         <p>P.IVA da inserire</p>
+        <p><a href="chi-sono.html">Chi sono</a></p>
+        <p><a href="blog/index.html">Blog</a></p>
       </div>
+
       <div class="footer-col">
-        <h5>Contatti & Info</h5>
+        <p class="h5">Percorsi &amp; Info</p>
         <div class="footer-social-links" aria-label="Canali social">
-          <a class="social-icon-link social-instagram" href="https://www.instagram.com/allenamente.emma/" target="_blank" rel="noopener" aria-label="Instagram di allenamente.emma">
+          <a class="social-icon-link social-instagram" href="https://www.instagram.com/allenamente.emma/" target="_blank" rel="noopener me" aria-label="Instagram di allenamente.emma">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <rect x="3" y="3" width="18" height="18" rx="5" />
               <circle cx="12" cy="12" r="4" />
               <circle cx="17.5" cy="6.5" r="1.2" />
             </svg>
           </a>
-          <a class="social-icon-link social-tiktok" href="https://www.tiktok.com/@allenamente.emma" target="_blank" rel="noopener" aria-label="TikTok di allenamente.emma">
+          <a class="social-icon-link social-tiktok" href="https://www.tiktok.com/@allenamente.emma" target="_blank" rel="noopener me" aria-label="TikTok di allenamente.emma">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M14 3c.4 3 2.1 4.9 5 5.2v3.1c-1.8-.1-3.4-.7-5-1.8v6.2c0 3.2-2.2 5.3-5.2 5.3-2.8 0-4.8-1.9-4.8-4.5 0-2.8 2.2-4.7 5.2-4.7.4 0 .8 0 1.1.1v3.3c-.4-.1-.8-.2-1.2-.2-1.1 0-1.9.6-1.9 1.5s.7 1.5 1.7 1.5c1.1 0 1.8-.7 1.8-2V3h3.3Z" />
             </svg>
           </a>
-          <a class="social-icon-link social-linkedin" href="https://www.linkedin.com/in/emma-veronesi/" target="_blank" rel="noopener" aria-label="LinkedIn di Emma Veronesi">
+          <a class="social-icon-link social-linkedin" href="https://www.linkedin.com/in/emma-veronesi/" target="_blank" rel="noopener me" aria-label="LinkedIn di Emma Veronesi">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M5.3 8.7H2.5V21h2.8V8.7ZM3.9 3C2.9 3 2.2 3.7 2.2 4.6s.7 1.6 1.7 1.6 1.7-.7 1.7-1.6S4.9 3 3.9 3ZM21.8 14c0-3.7-2-5.6-4.7-5.6-2.1 0-3.1 1.2-3.6 2V8.7h-2.8V21h2.8v-6.8c0-1.8 1-3 2.5-3s2.9 1.1 2.9 3.1V21h2.9v-7Z" />
             </svg>
           </a>
         </div>
+        <p><a href="psicologo-online-adolescenti.html">Psicologa online per adolescenti</a></p>
+        <p><a href="ansia-scolastica.html">Ansia scolastica</a></p>
+        <p><a href="ansia-giovani-adulti.html">Ansia nei giovani adulti</a></p>
+        <p><a href="autostima-adolescenti.html">Autostima negli adolescenti</a></p>
         <p><a href="privacy.html">Privacy Policy</a></p>
         <p><a href="cookie.html">Cookie Policy</a></p>
       </div>
     </div>
+
     <div class="footer-bottom">
       © <span data-year>2026</span> Emma Veronesi · Tutti i diritti riservati
     </div>

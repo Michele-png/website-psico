@@ -90,22 +90,26 @@
   }
 
   /* ---------- WhatsApp button (link dinamico) ---------- */
+  // Nell'HTML il bottone è un <button disabled> (non un link vuoto, che
+  // Google segnala come "link non scansionabile"). Se in config.js c'è
+  // il numero, lo trasformiamo in un vero link wa.me.
   const config = window.SITE_CONFIG || {};
   const whatsappBtn = document.querySelector('[data-whatsapp]');
   if (whatsappBtn && config.whatsapp) {
     const numero = (config.whatsapp.numero || '').trim();
     const messaggio = encodeURIComponent(config.whatsapp.messaggio || '');
     if (numero) {
-      whatsappBtn.href = `https://wa.me/${numero}?text=${messaggio}`;
-      whatsappBtn.classList.remove('btn-disabled');
-      whatsappBtn.removeAttribute('aria-disabled');
-      whatsappBtn.removeAttribute('tabindex');
-    } else {
-      whatsappBtn.removeAttribute('href');
-      whatsappBtn.classList.add('btn-disabled');
-      whatsappBtn.setAttribute('aria-disabled', 'true');
-      whatsappBtn.setAttribute('tabindex', '-1');
-      whatsappBtn.addEventListener('click', (e) => e.preventDefault());
+      const link = document.createElement('a');
+      link.href = `https://wa.me/${numero}?text=${messaggio}`;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.className = 'btn btn-whatsapp';
+      link.innerHTML = whatsappBtn.innerHTML;
+      const label = link.querySelector('span');
+      if (label) label.textContent = 'Scrivimi su WhatsApp';
+      whatsappBtn.replaceWith(link);
+      const testo = document.querySelector('[data-whatsapp-text]');
+      if (testo) testo.textContent = 'Se preferisci, scrivimi direttamente su WhatsApp: ti rispondo entro un giorno lavorativo.';
     }
   }
 
@@ -143,7 +147,8 @@
       try {
         const formData = new FormData(form);
         formData.append('access_key', accessKey);
-        formData.append('subject', `Nuovo messaggio dal sito da ${formData.get('name') || 'Anonimo'}`);
+        const pagina = formData.get('pagina') || 'sito';
+        formData.append('subject', `Nuovo messaggio dal sito (${pagina}) da ${formData.get('name') || 'Anonimo'}`);
         formData.append('from_name', 'Sito Emma Veronesi');
 
         const res = await fetch(endpoint, {
