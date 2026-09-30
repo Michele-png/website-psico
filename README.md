@@ -16,7 +16,7 @@ Sito statico professionale ospitato su GitHub Pages.
 - `robots.txt` consente esplicitamente i crawler AI (GPTBot, ClaudeBot, PerplexityBot…). `llms.txt` e `llms-full.txt` (standard llmstxt.org) si rigenerano con `python3 scripts/build-llms.py`.
 - `sitemap.xml` con `<lastmod>`: contiene solo le pagine indicizzabili (privacy e cookie sono `noindex` e NON vanno nella sitemap).
 - Velocità: hero senza animazione `reveal` (l'elemento LCP è visibile subito), immagini WebP + JPEG responsive con `width`/`height`, `loading="lazy"` sotto la piega. Le versioni ottimizzate si rigenerano con `python3 scripts/optimize-images.py` (richiede Pillow) dopo aver sostituito le foto originali.
-- Font: ancora da Google Fonts. Passo successivo consigliato: self-host in `assets/fonts/` (WOFF2) e aggiornare `<link>` + `@font-face`.
+- Font: self-hosted in `assets/fonts/` (WOFF2 variabili, sottoinsiemi latin + latin-ext) con `@font-face` in cima a `styles.css` e `preload` nei `<head>`. Nessuna richiesta a Google Fonts.
 
 **Dopo ogni modifica sostanziale:** aggiorna `<lastmod>` in `sitemap.xml`, rilancia `scripts/build-llms.py`, e in Search Console usa "Controllo URL → Richiedi indicizzazione" sulla pagina modificata.
 
@@ -203,7 +203,7 @@ website-psico/
 - Privacy Policy e Cookie Policy sono scritte a mano, conformi a GDPR ma non beneficiano della copertura legale di un servizio come iubenda. Per upgrade in seguito (~30€/anno): [iubenda](https://www.iubenda.com/it).
 - Il form usa un honeypot anti-spam invisibile (campo `botcheck`). I bot lo riempiono e li scartiamo lato JS.
 - Non sono usati cookie di profilazione né analytics: per questo motivo non c'è (e non serve) un cookie banner.
-- I font sono caricati da Google Fonts (CDN). Se in futuro vuoi essere 100% privacy-friendly, scarica i font e self-hostali in `assets/fonts/`.
+- I font sono self-hosted in `assets/fonts/` (nessuna connessione a Google): privacy e cookie policy lo dichiarano.
 
 ### Roadmap miglioramenti possibili
 
@@ -217,4 +217,4 @@ website-psico/
 - [ ] Analytics privacy-friendly (Plausible/Umami)
 - [x] Sezione blog/articoli (2 bozze iniziali; proseguire con 2 al mese dai post Instagram)
 - [ ] Calendly o Cal.com integrato per prenotazione diretta
-- [ ] Self-hosting dei font Google
+- [x] Self-hosting dei font Google
