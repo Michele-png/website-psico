@@ -1,4 +1,38 @@
+# emma-allenamente.com
+# Tutti i crawler sono benvenuti, inclusi quelli degli assistenti AI:
+# il sito vuole essere trovato e citato da Google, Bing, ChatGPT, Perplexity, Claude.
+
 User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
 Allow: /
 
 Sitemap: https://emma-allenamente.com/sitemap.xml
